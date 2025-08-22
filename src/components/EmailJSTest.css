@@ -1,0 +1,158 @@
+.emailjs-test {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  min-width: 300px;
+  max-width: 350px;
+}
+
+.test-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.test-header h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+.test-info {
+  margin-bottom: 1.5rem;
+}
+
+.test-info p {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  color: var(--text-color);
+}
+
+.test-info strong {
+  color: var(--main-color);
+}
+
+.test-btn {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.test-btn:hover:not(:disabled) {
+  background: #00d4ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 239, 255, 0.3);
+}
+
+.test-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.test-result {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.test-result.success {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #22c55e;
+}
+
+.test-result.error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+.test-instructions {
+  background: var(--second-bg-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 3px solid var(--main-color);
+}
+
+.test-instructions h4 {
+  margin: 0 0 0.8rem 0;
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+.test-instructions ol {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: var(--text-color);
+}
+
+.test-instructions li {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+/* Styles spécifiques pour le mode sombre */
+[data-theme="dark"] .emailjs-test {
+  background: #1a1a1a;
+  border-color: #333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .test-header {
+  border-color: #333;
+}
+
+[data-theme="dark"] .test-instructions {
+  background: #2a2a2a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .emailjs-test {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 2rem auto;
+    max-width: 100%;
+  }
+}
+
+/* Animation d'entrée */
+.emailjs-test {
+  animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

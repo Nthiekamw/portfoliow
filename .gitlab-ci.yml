@@ -1,0 +1,47 @@
+# GitLab CI/CD pour déploiement Netlify
+# Déploie automatiquement sur Netlify à chaque push sur la branche main
+
+stages:
+  - build
+  - deploy
+
+variables:
+  NETLIFY_SITE_ID: $NETLIFY_SITE_ID
+  NETLIFY_AUTH_TOKEN: $NETLIFY_AUTH_TOKEN
+
+# Étape de build
+build:
+  stage: build
+  image: node:18-alpine
+  cache:
+    paths:
+      - node_modules/
+  before_script:
+    - npm ci --only=production
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+    expire_in: 1 hour
+  only:
+    - main
+
+# Étape de déploiement sur Netlify
+deploy:
+  stage: deploy
+  image: alpine:latest
+  before_script:
+    - apk add --no-cache curl
+  script:
+    - |
+      # Déploiement sur Netlify via l'API
+      curl -H "Content-Type: application/zip" \
+           -H "Authorization: Bearer $NETLIFY_AUTH_TOKEN" \
+           --data-binary "@build.zip" \
+           "https://api.netlify.com/api/v1/sites/$NETLIFY_SITE_ID/deploys"
+  dependencies:
+    - build
+  only:
+    - main
+  when: manual

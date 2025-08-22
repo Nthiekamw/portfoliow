@@ -1,0 +1,505 @@
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #0f0f23 50%, #1a1a1a 75%, #0a0a0a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Particules animées */
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: particleFloat 8s infinite linear;
+  filter: blur(0.5px);
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+/* Formes morphantes */
+.shapes-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.morphing-shape {
+  position: absolute;
+  filter: blur(1px);
+  animation: shapeMorph 10s infinite ease-in-out;
+}
+
+@keyframes shapeMorph {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.8);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1);
+  }
+}
+
+/* Contenu principal */
+.splash-content {
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+/* Logo animé */
+.logo-container {
+  margin-bottom: 3rem;
+}
+
+.logo {
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 50%, #0066ff 100%);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 50px rgba(0, 212, 255, 0.5),
+    0 0 100px rgba(0, 212, 255, 0.3),
+    0 0 150px rgba(0, 212, 255, 0.1);
+  animation: logoGlow 3s infinite ease-in-out;
+}
+
+@keyframes logoGlow {
+  0%, 100% {
+    box-shadow: 
+      0 0 50px rgba(0, 212, 255, 0.5),
+      0 0 100px rgba(0, 212, 255, 0.3),
+      0 0 150px rgba(0, 212, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 80px rgba(0, 212, 255, 0.8),
+      0 0 150px rgba(0, 212, 255, 0.5),
+      0 0 200px rgba(0, 212, 255, 0.3);
+  }
+}
+
+.logo-text {
+  font-size: 4rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.2rem;
+}
+
+.logo-glow {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  right: -20%;
+  bottom: -20%;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: glowPulse 2s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+/* Titre principal */
+.main-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 
+    0 0 20px rgba(0, 212, 255, 0.8),
+    0 0 40px rgba(0, 212, 255, 0.4);
+  background: linear-gradient(135deg, #ffffff 0%, #00d4ff 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleShine 3s infinite ease-in-out;
+}
+
+@keyframes titleShine {
+  0%, 100% {
+    background-position: -200% center;
+  }
+  50% {
+    background-position: 200% center;
+  }
+}
+
+/* Sous-titre */
+.subtitle {
+  font-size: 1.8rem;
+  color: #cccccc;
+  margin-bottom: 4rem;
+  font-weight: 400;
+  opacity: 0.9;
+  animation: subtitleFade 2s infinite ease-in-out;
+}
+
+@keyframes subtitleFade {
+  0%, 100% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Étapes de chargement */
+.loading-steps {
+  margin-bottom: 3rem;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-step {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-shadow: 0 0 10px currentColor;
+  animation: stepPulse 1s infinite ease-in-out;
+}
+
+@keyframes stepPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+/* Barre de progression */
+.progress-container {
+  width: 30rem;
+  height: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  margin: 0 auto 2rem;
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: progressShine 2s infinite linear;
+}
+
+@keyframes progressShine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Indicateur de progression */
+.progress-text {
+  font-size: 1.4rem;
+  color: #00d4ff;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+/* Effets de fond */
+.background-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: orbFloat 20s infinite ease-in-out;
+}
+
+.orb-1 {
+  width: 30rem;
+  height: 30rem;
+  background: radial-gradient(circle, rgba(255, 107, 107, 0.3) 0%, transparent 70%);
+  top: -15rem;
+  left: -15rem;
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  width: 25rem;
+  height: 25rem;
+  background: radial-gradient(circle, rgba(78, 205, 196, 0.3) 0%, transparent 70%);
+  top: 50%;
+  right: -12.5rem;
+  animation-delay: -7s;
+}
+
+.orb-3 {
+  width: 20rem;
+  height: 20rem;
+  background: radial-gradient(circle, rgba(69, 183, 209, 0.3) 0%, transparent 70%);
+  bottom: -10rem;
+  left: 50%;
+  animation-delay: -14s;
+}
+
+@keyframes orbFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(10px, -10px) scale(1.1);
+  }
+  66% {
+    transform: translate(-5px, 15px) scale(0.9);
+  }
+}
+
+/* Lignes de scan */
+.scan-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.scan-line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+  animation: scanMove 4s infinite linear;
+}
+
+.line-1 {
+  top: 20%;
+  animation-delay: 0s;
+}
+
+.line-2 {
+  top: 50%;
+  animation-delay: -1.3s;
+}
+
+.line-3 {
+  top: 80%;
+  animation-delay: -2.6s;
+}
+
+@keyframes scanMove {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Effets de particules supplémentaires */
+.splash-screen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(78, 205, 196, 0.1) 0%, transparent 50%);
+  animation: backgroundShift 15s infinite ease-in-out;
+}
+
+@keyframes backgroundShift {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(1deg);
+  }
+  50% {
+    transform: scale(0.9) rotate(-1deg);
+  }
+  75% {
+    transform: scale(1.05) rotate(0.5deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logo {
+    width: 8rem;
+    height: 8rem;
+  }
+  
+  .logo-text {
+    font-size: 2.5rem;
+  }
+  
+  .main-title {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .progress-container {
+    width: 20rem;
+  }
+  
+  .orb-1 {
+    width: 20rem;
+    height: 20rem;
+    top: -10rem;
+    left: -10rem;
+  }
+  
+  .orb-2 {
+    width: 15rem;
+    height: 15rem;
+    right: -7.5rem;
+  }
+  
+  .orb-3 {
+    width: 12rem;
+    height: 12rem;
+    bottom: -6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 6rem;
+    height: 6rem;
+  }
+  
+  .logo-text {
+    font-size: 2rem;
+  }
+  
+  .main-title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .progress-container {
+    width: 15rem;
+  }
+  
+  .loading-step {
+    font-size: 1.4rem;
+  }
+}
+
+/* Animations d'entrée et de sortie */
+.splash-screen.enter {
+  animation: splashEnter 0.8s ease-out;
+}
+
+.splash-screen.exit {
+  animation: splashExit 0.6s ease-in;
+}
+
+@keyframes splashEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate(-5deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes splashExit {
+  from {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.2) rotate(5deg);
+  }
+}

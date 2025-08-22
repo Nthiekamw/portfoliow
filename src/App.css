@@ -1,0 +1,255 @@
+/* CSS Variables for Theme */
+:root {
+  /* Dark Theme (Default) */
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+  --accent-color: #ff6b6b;
+  --success-color: #51cf66;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --hover-bg: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --second-bg-color: #f8f9fa;
+  --text-color: #1f242d;
+  --main-color: #007bff;
+  --accent-color: #dc3545;
+  --success-color: #28a745;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --card-bg: rgba(0, 0, 0, 0.05);
+  --hover-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+/* Loading Screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--border-color);
+  border-top: 3px solid var(--main-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-content h2 {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+/* App Container */
+.App {
+  min-height: 100vh;
+  background: var(--bg-color);
+}
+
+/* Main Content */
+main {
+  padding-top: 80px; /* Account for fixed header */
+}
+
+/* Section Styles */
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 2.4rem;
+  background: var(--main-color);
+  color: var(--bg-color);
+  border-radius: 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px var(--main-color);
+}
+
+.btn.primary {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+}
+
+.btn.secondary:hover {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+/* Heading Styles */
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+  margin-bottom: 3rem;
+}
+
+.heading span {
+  color: var(--main-color);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  
+  .heading {
+    font-size: 3.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  
+  .heading {
+    font-size: 3.2rem;
+  }
+  
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 10rem 2% 2rem;
+  }
+  
+  .heading {
+    font-size: 2.8rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.6rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+.slide-left {
+  animation: slideLeft 0.6s ease-out;
+}
+
+.slide-right {
+  animation: slideRight 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}

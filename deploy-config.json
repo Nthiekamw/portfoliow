@@ -1,0 +1,57 @@
+{
+  "deployment": {
+    "platform": "netlify",
+    "ci_cd": "gitlab",
+    "auto_deploy": true,
+    "manual_deploy": true
+  },
+  "build": {
+    "command": "npm run build",
+    "output": "build",
+    "node_version": "18",
+    "npm_version": "9"
+  },
+  "netlify": {
+    "redirects": [
+      {
+        "from": "/*",
+        "to": "/index.html",
+        "status": 200
+      }
+    ],
+    "headers": [
+      {
+        "path": "/*",
+        "headers": [
+          {
+            "name": "X-Frame-Options",
+            "value": "DENY"
+          },
+          {
+            "name": "X-XSS-Protection",
+            "value": "1; mode=block"
+          },
+          {
+            "name": "X-Content-Type-Options",
+            "value": "nosniff"
+          }
+        ]
+      }
+    ]
+  },
+  "gitlab": {
+    "branch": "main",
+    "stages": ["build", "deploy"],
+    "cache": ["node_modules"],
+    "artifacts": {
+      "paths": ["build"],
+      "expire_in": "1 hour"
+    }
+  },
+  "environment": {
+    "variables": [
+      "NETLIFY_SITE_ID",
+      "NETLIFY_AUTH_TOKEN"
+    ]
+  }
+}
