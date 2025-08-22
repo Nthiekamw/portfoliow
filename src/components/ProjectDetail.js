@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useLanguage } from '../contexts/LanguageContext';
 import { ArrowLeft, ExternalLink, Code, Database, Globe } from 'lucide-react';
 import './ProjectDetail.css';
 
 const ProjectDetail = () => {
   const { id } = useParams();
-  const { } = useLanguage();
+
   const [project, setProject] = useState(null);
 
-  const projectsData = {
+  const projectsData = useMemo(() => ({
     'parc-informatique': {
       title: "Système de Gestion de Parc Informatique",
       period: "Depuis novembre 2024",
@@ -58,13 +57,13 @@ const ProjectDetail = () => {
         "Pipeline CI/CD pour déploiement continu en environnement UAT"
       ]
     }
-  };
+  }), []);
 
   useEffect(() => {
     if (projectsData[id]) {
       setProject(projectsData[id]);
     }
-  }, [id]);
+  }, [id, projectsData]);
 
   if (!project) {
     return (

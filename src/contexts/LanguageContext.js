@@ -54,7 +54,7 @@ export const LanguageProvider = ({ children }) => {
         // Skills
         mySkills: 'Mes Compétences',
         skillsTitle: 'Mes',
-        skills: 'Compétences',
+        skillsLabel: 'Compétences',
         backendTechnologies: 'Technologies Back-End',
         frontendTechnologies: 'Technologies Front-End',
         architecture: 'Architecture',
@@ -72,7 +72,7 @@ export const LanguageProvider = ({ children }) => {
         professionalExperience: 'Expériences Professionnelles',
         
         // Services
-        services: 'Mes Services',
+        myServices: 'Mes Services',
         
         // Portfolio
         academicProjects: 'Projets Académiques',
@@ -123,7 +123,7 @@ export const LanguageProvider = ({ children }) => {
         // Skills
         mySkills: 'My Skills',
         skillsTitle: 'My',
-        skills: 'Skills',
+        skillsLabel: 'Skills',
         backendTechnologies: 'Back-End Technologies',
         frontendTechnologies: 'Front-End Technologies',
         architecture: 'Architecture',
@@ -141,7 +141,7 @@ export const LanguageProvider = ({ children }) => {
         professionalExperience: 'Professional Experience',
         
         // Services
-        services: 'My Services',
+        myServices: 'My Services',
         
         // Portfolio
         academicProjects: 'Academic Projects',

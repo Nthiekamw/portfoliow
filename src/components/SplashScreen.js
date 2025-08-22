@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './SplashScreen.css';
 
@@ -17,7 +17,7 @@ const SplashScreen = ({ onComplete }) => {
   const [shapes, setShapes] = useState([]);
   const animationRef = useRef(null);
 
-  const steps = [
+  const steps = useMemo(() => [
     {
       text: language === 'fr' ? 'Chargement...' : 'Loading...',
       duration: 2000,
@@ -38,7 +38,7 @@ const SplashScreen = ({ onComplete }) => {
       duration: 1500,
       color: '#45b7d1'
     }
-  ];
+  ], [language]);
 
   // Créer des particules
   useEffect(() => {
