@@ -3,10 +3,13 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Send, Mail, Phone, MapPin, CheckCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import usePageAnimation from '../animations/usePageAnimation';
 import './Contact.css';
+import '../animations/animations.css';
 
 const Contact = () => {
   const { t } = useLanguage();
+  const animationRef = usePageAnimation('contact');
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -245,7 +248,7 @@ Cordialement,
   };
 
   return (
-    <section className="contact" id="contact">
+    <section className="contact" id="contact" ref={animationRef}>
       <motion.div
         className="contact-container"
         variants={containerVariants}

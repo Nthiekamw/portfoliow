@@ -2,10 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { CheckCircle, Briefcase, Code } from 'lucide-react';
+import usePageAnimation from '../animations/usePageAnimation';
 import './About.css';
+import '../animations/animations.css';
 
 const About = () => {
   const { t } = useLanguage();
+  const animationRef = usePageAnimation('about');
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -30,7 +33,7 @@ const About = () => {
   };
 
   return (
-    <section className="about" id="about">
+    <section className="about" id="about" ref={animationRef}>
       <motion.div 
         className="about-container"
         variants={containerVariants}

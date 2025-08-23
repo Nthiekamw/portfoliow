@@ -1,0 +1,475 @@
+.experience-detail {
+  background: linear-gradient(135deg, var(--bg-color) 0%, rgba(0, 0, 0, 0.95) 100%);
+  min-height: 100vh;
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-detail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(0, 239, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(0, 150, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.experience-detail-container {
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header avec bouton de retour */
+.experience-detail-header {
+  margin-bottom: 4rem;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.back-btn:hover {
+  background: rgba(0, 239, 255, 0.2);
+  border-color: rgba(0, 239, 255, 0.4);
+  transform: translateX(-5px);
+  color: #ffffff;
+}
+
+/* Section titre et métadonnées */
+.experience-detail-title-section {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.experience-detail-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, var(--main-color) 30%, #00d4ff 70%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 3rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.experience-detail-meta {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 2.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.6rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+.meta-item svg {
+  color: var(--main-color);
+}
+
+.meta-item.client {
+  background: rgba(0, 239, 255, 0.1);
+  border-color: rgba(0, 239, 255, 0.3);
+}
+
+.client-icon {
+  font-size: 2rem;
+}
+
+/* Description principale */
+.experience-detail-description {
+  margin-bottom: 5rem;
+  padding: 4rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3rem;
+  backdrop-filter: blur(20px);
+}
+
+.experience-detail-description h2 {
+  font-size: 2.4rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.experience-detail-description p {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: justify;
+}
+
+/* Captures d'écran */
+.experience-detail-screenshots {
+  margin-bottom: 5rem;
+}
+
+.experience-detail-screenshots h2 {
+  font-size: 2.4rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+}
+
+.screenshots-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3rem;
+}
+
+.screenshot-item {
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+}
+
+.screenshot-item:hover {
+  transform: translateY(-10px);
+  border-color: var(--main-color);
+  box-shadow: 0 25px 60px rgba(0, 239, 255, 0.2);
+}
+
+.screenshot-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Technologies */
+.experience-detail-technologies {
+  margin-bottom: 5rem;
+}
+
+.experience-detail-technologies h2 {
+  font-size: 2.4rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.tech-tag {
+  background: linear-gradient(135deg, rgba(0, 239, 255, 0.2) 0%, rgba(0, 212, 255, 0.15) 100%);
+  color: #ffffff;
+  padding: 1.2rem 2.5rem;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 239, 255, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.tech-tag:hover {
+  transform: translateY(-5px) scale(1.05);
+  border-color: rgba(0, 239, 255, 0.6);
+  box-shadow: 0 15px 40px rgba(0, 239, 255, 0.3);
+}
+
+/* Réalisations */
+.experience-detail-achievements {
+  margin-bottom: 5rem;
+}
+
+.experience-detail-achievements h2 {
+  font-size: 2.4rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.achievements-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 2rem;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.6rem;
+  line-height: 1.7;
+  backdrop-filter: blur(15px);
+  transition: all 0.4s ease;
+}
+
+.achievement-item:hover {
+  transform: translateX(10px);
+  border-color: rgba(0, 239, 255, 0.3);
+  background: rgba(0, 239, 255, 0.05);
+}
+
+.achievement-icon {
+  font-size: 2rem;
+  color: var(--main-color);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+/* Défis et impact */
+.experience-detail-challenges-impact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+.challenges-section,
+.impact-section {
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2.5rem;
+  backdrop-filter: blur(15px);
+}
+
+.challenges-section h2,
+.impact-section h2 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.challenges-section p,
+.impact-section p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: justify;
+}
+
+/* Actions */
+.experience-detail-actions {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.8rem 3.5rem;
+  border-radius: 3rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.action-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.action-btn:hover::before {
+  left: 100%;
+}
+
+.action-btn.gitlab {
+  background: linear-gradient(135deg, rgba(252, 109, 38, 0.9) 0%, rgba(226, 67, 41, 0.8) 100%);
+  color: white;
+  border-color: rgba(252, 109, 38, 0.5);
+  box-shadow: 0 12px 35px rgba(252, 109, 38, 0.3);
+}
+
+.action-btn.gitlab:hover {
+  transform: translateY(-8px) scale(1.08);
+  box-shadow: 0 25px 60px rgba(252, 109, 38, 0.5);
+  border-color: rgba(252, 109, 38, 0.8);
+}
+
+.action-btn.demo {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.9) 0%, rgba(0, 239, 255, 0.8) 100%);
+  color: white;
+  border-color: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 12px 35px rgba(0, 212, 255, 0.3);
+}
+
+.action-btn.demo:hover {
+  transform: translateY(-8px) scale(1.08);
+  box-shadow: 0 25px 60px rgba(0, 212, 255, 0.5);
+  border-color: rgba(0, 212, 255, 0.8);
+}
+
+.action-btn.demo.disabled {
+  background: linear-gradient(135deg, rgba(128, 128, 128, 0.4) 0%, rgba(160, 160, 160, 0.3) 100%);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: not-allowed;
+  border-color: rgba(128, 128, 128, 0.4);
+  box-shadow: none;
+}
+
+.action-btn.demo.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Page non trouvée */
+.experience-detail-not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.experience-detail-not-found h2 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .experience-detail-title {
+    font-size: 4rem;
+  }
+  
+  .experience-detail-meta {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .experience-detail-title {
+    font-size: 3.5rem;
+  }
+  
+  .experience-detail-challenges-impact {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .experience-detail-meta {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-detail {
+    padding: 1rem 0;
+  }
+  
+  .experience-detail-container {
+    padding: 0 1.5rem;
+  }
+  
+  .experience-detail-title {
+    font-size: 3rem;
+  }
+  
+  .experience-detail-description,
+  .challenges-section,
+  .impact-section {
+    padding: 2.5rem;
+  }
+  
+  .screenshots-gallery {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .experience-detail-actions {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .action-btn {
+    padding: 1.5rem 3rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-detail-title {
+    font-size: 2.5rem;
+  }
+  
+  .experience-detail-description,
+  .challenges-section,
+  .impact-section {
+    padding: 2rem;
+  }
+  
+  .meta-item {
+    padding: 1.2rem 2rem;
+    font-size: 1.4rem;
+  }
+  
+  .tech-tag {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+  
+  .achievement-item {
+    padding: 2rem;
+    font-size: 1.5rem;
+  }
+}

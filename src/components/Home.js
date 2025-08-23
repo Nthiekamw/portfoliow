@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Download, MessageCircle, Github, Linkedin, Gitlab } from 'lucide-react';
+import usePageAnimation from '../animations/usePageAnimation';
 import './Home.css';
+import '../animations/animations.css';
 
 const Home = () => {
   const { t } = useLanguage();
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const animationRef = usePageAnimation('home');
   
   const texts = useLanguage().isFrench ? [
     'Développeur Full-Stack',
@@ -61,7 +64,7 @@ const Home = () => {
   ];
 
   return (
-    <section className="home" id="home">
+    <section className="home" id="home" ref={animationRef}>
       <motion.div 
         className="home-content"
         variants={containerVariants}

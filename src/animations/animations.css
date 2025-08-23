@@ -1,0 +1,418 @@
+/* Styles pour les animations de page */
+
+/* Animation flottante pour les particules de la timeline */
+@keyframes float {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px);
+    opacity: 1;
+  }
+}
+
+/* Animation de pulsation pour les particules */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Animation de rotation pour certains éléments */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation de glissement pour les cartes */
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animation de zoom pour les éléments au survol */
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+/* Animation de rebond pour les éléments */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Animation de vague pour les ondes */
+@keyframes wave {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Animation de particules magnétiques */
+@keyframes magnetic {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(5px, -5px);
+  }
+  50% {
+    transform: translate(0, -10px);
+  }
+  75% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Styles pour la timeline des expériences */
+.experience-timeline {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #00d4ff, transparent);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #00d4ff;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: float 3s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+/* Styles pour les particules flottantes */
+.floating-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(0, 239, 255, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Styles pour les ondes */
+.wave-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 239, 255, 0.1), transparent);
+  animation: wave 8s linear infinite;
+}
+
+.wave:nth-child(2) {
+  animation-delay: -2s;
+  opacity: 0.5;
+}
+
+.wave:nth-child(3) {
+  animation-delay: -4s;
+  opacity: 0.3;
+}
+
+/* Styles pour les effets de parallaxe */
+.parallax-element {
+  transition: transform 0.1s ease-out;
+}
+
+/* Styles pour les cartes animées */
+.animated-card {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animated-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 239, 255, 0.2);
+}
+
+/* Styles pour les particules magnétiques */
+.magnetic-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 239, 255, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: magnetic 4s ease-in-out infinite;
+  box-shadow: 0 0 15px rgba(0, 239, 255, 0.6);
+}
+
+/* Styles pour les connexions entre particules */
+.particle-connection {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 239, 255, 0.3), transparent);
+  pointer-events: none;
+  transform-origin: left center;
+}
+
+/* Styles pour les effets de lueur */
+.glow-effect {
+  position: relative;
+}
+
+.glow-effect::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00d4ff, #00efff, #00d4ff);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glow-effect:hover::before {
+  opacity: 0.3;
+}
+
+/* Styles pour les animations de chargement */
+.loading-animation {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(0, 239, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #00d4ff;
+  animation: rotate 1s ease-in-out infinite;
+}
+
+/* Styles pour les effets de transition de page */
+.page-transition {
+  animation: slideInFromBottom 0.8s ease-out;
+}
+
+/* Styles pour les éléments interactifs */
+.interactive-element {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.interactive-element:hover {
+  animation: bounce 0.6s ease;
+}
+
+/* Styles pour les effets de profondeur */
+.depth-effect {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.depth-element {
+  transform: translateZ(20px);
+  transition: transform 0.3s ease;
+}
+
+.depth-element:hover {
+  transform: translateZ(40px);
+}
+
+/* Styles pour les animations de texte */
+.text-animation {
+  overflow: hidden;
+}
+
+.text-animation span {
+  display: inline-block;
+  animation: slideInFromBottom 0.6s ease forwards;
+  opacity: 0;
+}
+
+.text-animation span:nth-child(1) { animation-delay: 0.1s; }
+.text-animation span:nth-child(2) { animation-delay: 0.2s; }
+.text-animation span:nth-child(3) { animation-delay: 0.3s; }
+.text-animation span:nth-child(4) { animation-delay: 0.4s; }
+.text-animation span:nth-child(5) { animation-delay: 0.5s; }
+
+/* Styles pour les effets de particules en arrière-plan */
+.background-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Styles pour les animations de navigation */
+.nav-animation {
+  transition: all 0.3s ease;
+}
+
+.nav-animation:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 239, 255, 0.3);
+}
+
+/* Styles pour les effets de focus */
+.focus-effect:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 239, 255, 0.5);
+  transform: scale(1.02);
+}
+
+/* Styles pour les animations de scroll */
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.scroll-animation.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Styles pour les effets de survol avancés */
+.hover-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.hover-effect:hover::after {
+  left: 100%;
+}
+
+/* Styles pour les animations de chargement de page */
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeOut 0.5s ease 1s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Styles pour les effets de particules réactives */
+.reactive-particle {
+  transition: all 0.3s ease;
+}
+
+.reactive-particle:hover {
+  transform: scale(1.5);
+  box-shadow: 0 0 20px rgba(0, 239, 255, 0.8);
+}
+
+/* Styles pour les animations de grille */
+.grid-animation {
+  display: grid;
+  gap: 20px;
+  animation: gridAppear 0.8s ease-out;
+}
+
+@keyframes gridAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Styles pour les effets de distorsion */
+.distortion-effect {
+  transition: all 0.3s ease;
+}
+
+.distortion-effect:hover {
+  transform: skew(-2deg, 1deg) scale(1.05);
+}
+
+/* Styles pour les animations de typewriter */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #00d4ff;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #00d4ff; }
+}

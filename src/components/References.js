@@ -2,10 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Mail, Dumbbell, Music, Heart } from 'lucide-react';
+import usePageAnimation from '../animations/usePageAnimation';
 import './References.css';
+import '../animations/animations.css';
 
 const References = () => {
   const { t } = useLanguage();
+  const animationRef = usePageAnimation('references');
 
   const references = [
     {
@@ -55,7 +58,7 @@ const References = () => {
   };
 
   return (
-    <section className="references" id="references">
+    <section className="references" id="references" ref={animationRef}>
       <motion.div
         className="references-container"
         variants={containerVariants}

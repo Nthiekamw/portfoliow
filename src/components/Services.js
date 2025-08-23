@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { Smartphone, Code, Database, Globe, Shield, Zap, Palette, Cloud, X } from 'lucide-react';
+import { Smartphone, Code, Database, Globe, Shield, Zap, Palette, Cloud } from 'lucide-react';
+import usePageAnimation from '../animations/usePageAnimation';
 import './Services.css';
+import '../animations/animations.css';
 
 const Services = () => {
   const { t, language } = useLanguage();
-  const [selectedService, setSelectedService] = useState(null);
+  const animationRef = usePageAnimation('services');
 
   const services = [
     {
@@ -122,24 +124,8 @@ const Services = () => {
     }
   ];
 
-  const openServiceModal = (service) => {
-    console.log('🔧 Opening service modal for:', service.title);
-    console.log('🔧 Setting selectedService to:', service);
-    setSelectedService(service);
-    console.log('🔧 State should now be updated');
-    
-    // Debug: vérifier que le state est bien mis à jour
-    setTimeout(() => {
-      console.log('🔧 Current selectedService state:', selectedService);
-    }, 100);
-  };
-
-  const closeServiceModal = () => {
-    setSelectedService(null);
-  };
-
   return (
-    <section className="services" id="services">
+    <section className="services" id="services" ref={animationRef}>
       <div className="services-container">
         <h2 className="heading">
           {t('services')}
@@ -147,54 +133,19 @@ const Services = () => {
         
         <div className="services-grid">
           {services.map((service, index) => (
-            <div key={index} className="service-box">
+            <div 
+              key={index} 
+              className="service-box"
+            >
               <div className="service-icon" style={{ color: service.color }}>
                 {service.icon}
               </div>
               <h3>{service.title}</h3>
               <p>{service.shortDescription}</p>
-              <button 
-                className="btn"
-                onClick={() => openServiceModal(service)}
-              >
-                {t('readMore')}
-              </button>
             </div>
           ))}
         </div>
       </div>
-
-      {/* Modal copié de Skills */}
-      {selectedService && (
-        <div className="modal-overlay" onClick={closeServiceModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-header">
-              <div className="modal-icon" style={{ color: selectedService.color }}>
-                {selectedService.icon}
-              </div>
-              <h3>{selectedService.title}</h3>
-              <button className="close-btn" onClick={closeServiceModal}>
-                <X size={24} />
-              </button>
-            </div>
-            
-                         <div className="modal-body-content">
-              <p className="modal-description">{selectedService.fullDescription}</p>
-              
-              <div className="modal-technologies">
-                <h4>{language === 'fr' ? 'Technologies utilisées :' : 'Technologies used:'}</h4>
-                <div className="tech-tags">
-                  {selectedService.technologies.map((tech, index) => (
-                    <span key={index} className="tech-tag" style={{ backgroundColor: selectedService.color }}>
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };

@@ -2,10 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { ExternalLink } from 'lucide-react';
+import usePageAnimation from '../animations/usePageAnimation';
 import './Portfolio.css';
+import '../animations/animations.css';
 
 const Portfolio = () => {
   const { t } = useLanguage();
+  const animationRef = usePageAnimation('portfolio');
 
   const projects = [
     {
@@ -25,24 +28,6 @@ const Portfolio = () => {
       description: "Site e-commerce complet avec PHP, MySQL et tests automatisés Selenium",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&crop=center",
       id: "ecommerce"
-    },
-    {
-      title: "Application Mobile de Gestion",
-      description: "App mobile cross-platform avec React Native pour la gestion d'entreprise",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop&crop=center",
-      id: "mobile-app"
-    },
-    {
-      title: "Dashboard Analytique",
-      description: "Interface de visualisation de données avec D3.js et Chart.js",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center",
-      id: "dashboard"
-    },
-    {
-      title: "API REST Microservices",
-      description: "Architecture microservices avec Spring Cloud et Docker",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&crop=center",
-      id: "microservices"
     }
   ];
 
@@ -69,7 +54,7 @@ const Portfolio = () => {
   };
 
   return (
-    <section className="portfolio" id="portfolio">
+    <section className="portfolio" id="portfolio" ref={animationRef}>
       <motion.div
         className="portfolio-container"
         variants={containerVariants}

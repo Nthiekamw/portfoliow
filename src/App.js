@@ -12,6 +12,7 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import References from './components/References';
 import ProjectDetail from './components/ProjectDetail';
+import ExperienceDetail from './components/ExperienceDetail';
 import ParticleBackground from './components/ParticleBackground';
 import MorphingShapes from './components/MorphingShapes';
 import SplashScreen from './components/SplashScreen';
@@ -52,6 +53,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/references" element={<References />} />
                 <Route path="/project/:id" element={<ProjectDetail />} />
+                <Route path="/experience/:id" element={<ExperienceDetail />} />
               </Routes>
             </main>
           </div>

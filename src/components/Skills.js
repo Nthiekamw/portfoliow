@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Code, Database, Server, Shield, GitBranch, TestTube, Users, GraduationCap, Globe, X } from 'lucide-react';
+import usePageAnimation from '../animations/usePageAnimation';
 import './Skills.css';
+import '../animations/animations.css';
 
 const Skills = () => {
   const { t, isFrench } = useLanguage();
   const [selectedSkill, setSelectedSkill] = useState(null);
+  const animationRef = usePageAnimation('skills');
 
   const technicalSkills = [
     {
@@ -157,7 +160,7 @@ const Skills = () => {
   };
 
   return (
-    <section className="skills" id="skills">
+    <section className="skills" id="skills" ref={animationRef}>
       <motion.div
         className="skills-container"
         variants={containerVariants}
