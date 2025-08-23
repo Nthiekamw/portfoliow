@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ExternalLink, Code, Database, Globe, Github, Play, Image, Calendar, MapPin, Users, Award } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Code, Globe, Github, Play, Image, Calendar, MapPin, Users, Award } from 'lucide-react';
 import usePageAnimation from '../animations/usePageAnimation';
 import './ProjectDetail.css';
 import '../animations/animations.css';

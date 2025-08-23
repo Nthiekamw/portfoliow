@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+// AnimationManager - Gestionnaire centralisé des animations de page
 
 class AnimationManager {
   constructor() {
@@ -235,7 +235,6 @@ class AnimationManager {
     const container = containerRef.current;
     const cards = container.querySelectorAll('.portfolio-item');
     
-    let scrollY = 0;
     let ticking = false;
 
     // Animation d'entrée des cartes
@@ -259,7 +258,6 @@ class AnimationManager {
 
     // Effet de parallaxe au scroll
     const handleScroll = () => {
-      scrollY = window.pageYOffset;
       if (!ticking) {
         requestAnimationFrame(() => {
           animateCards();
@@ -405,7 +403,6 @@ class AnimationManager {
 
     let waves = [];
     let particles = [];
-    let mouse = { x: 0, y: 0 };
 
     // Configuration des ondes
     const createWaves = () => {

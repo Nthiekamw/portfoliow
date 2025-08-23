@@ -7,7 +7,7 @@ import './ExperienceDetail.css';
 import '../animations/animations.css';
 
 const ExperienceDetail = () => {
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
   const { id } = useParams();
   const animationRef = usePageAnimation('experience-detail');
 
