@@ -42,9 +42,9 @@ const ExperienceDetail = () => {
         "/assets/API 2.png",
         "/assets/Desktop.png"
       ],
-      gitlabUrl: "https://gitlab.com/JasonKamsu/junapay",
+      gitlabUrl: "https://gitlab.com/juna-pay",
       hasDemo: true,
-      demoUrl: "https://demo.junapay.com",
+      demoUrl: "https://www.juna-pay.fr",
       client: "JunaPay Technologies"
     },
     {
@@ -74,7 +74,7 @@ const ExperienceDetail = () => {
         "/assets/Web 2.png",
         "/assets/Web 3.png"
       ],
-      gitlabUrl: "https://gitlab.com/JasonKamsu/estlc-inscription",
+      gitlabUrl: "https://github.com/Jasonksj/estlc-inscription",
       hasDemo: false,
       demoUrl: null
     },
