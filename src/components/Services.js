@@ -14,22 +14,22 @@ const Services = () => {
       icon: <Smartphone size={40} />,
       title: language === 'fr' ? "Développement Mobile" : "Mobile Development",
       shortDescription: language === 'fr' 
-        ? "Spécialisé en Java et Spring Boot, je développe mes compétences en développement mobile."
-        : "Proficient in Java and Spring Boot, I am dedicated to expanding my mobile development skills.",
+        ? "Spécialisé en dark et flutter, je développes mes compétences en développement web et  mobile."
+        : "Proficient in dark abd flutter, I am dedicated to expanding my mobile and web development skills.",
       fullDescription: language === 'fr'
-        ? "Expert en développement backend avec Java Spring Boot, je me spécialise dans la création d'APIs robustes et sécurisées. Mon expérience inclut la conception d'architectures microservices, l'optimisation des performances et la mise en place de systèmes de sécurité avancés. Je travaille actuellement sur l'expansion de mes compétences en développement mobile pour offrir des solutions complètes cross-platform."
-        : "Expert in backend development with Java Spring Boot, I specialize in creating robust and secure APIs. My experience includes designing microservice architectures, performance optimization, and implementing advanced security systems. I am currently working on expanding my mobile development skills to offer complete cross-platform solutions.",
+        ? "Expert en développement backend avec Csharp , je me spécialise dans la création d'APIs robustes et sécurisées. Mon expérience inclut la conception d'architectures microservices, l'optimisation des performances et la mise en place de systèmes de sécurité avancés. Je travaille actuellement sur l'expansion de mes compétences en développement mobile pour offrir des solutions complètes cross-platform."
+        : "Expert in backend development with Csharp , I specialize in creating robust and secure APIs. My experience includes designing microservice architectures, performance optimization, and implementing advanced security systems. I am currently working on expanding my mobile development skills to offer complete cross-platform solutions.",
       color: "#ff6b6b",
       technologies: language === 'fr' 
-        ? ["Java", "Spring Boot", "REST APIs", "Microservices", "Sécurité"]
-        : ["Java", "Spring Boot", "REST APIs", "Microservices", "Security"]
+        ? ["Csharp ", "Csharp  ", "REST APIs", "Microservices", "Sécurité"]
+        : ["Csharp ", "Csharp  ", "REST APIs", "Microservices", "Security"]
     },
     {
       icon: <Code size={40} />,
       title: language === 'fr' ? "Intégration d'APIs" : "API Integration",
       shortDescription: language === 'fr'
-        ? "Expérimenté dans la conception et l'intégration d'APIs, notamment lors de mon stage chez Geny Shop."
-        : "Experienced in designing and integrating APIs, especially during my internship with Geny Shop.",
+        ? "Expérimenté dans la conception et l'intégration d'APIs, notamment lors de mes  stage et alternance ."
+        : "Experienced in designing and integrating APIs, especially during my internship and Work-study.",
       fullDescription: language === 'fr'
         ? "Spécialiste de l'intégration d'APIs avec une expérience approfondie dans la conception de systèmes distribués. J'ai développé des APIs RESTful performantes avec documentation Swagger, implémenté des systèmes d'authentification JWT, et créé des pipelines CI/CD. Mon stage chez Geny Shop m'a permis de maîtriser l'intégration de services tiers et l'optimisation des performances API."
         : "API integration specialist with deep experience in designing distributed systems. I have developed high-performance RESTful APIs with Swagger documentation, implemented JWT authentication systems, and created CI/CD pipelines. My internship at Geny Shop allowed me to master third-party service integration and API performance optimization.",
@@ -45,12 +45,12 @@ const Services = () => {
         ? "Avec une solide base en développement backend et frontend."
         : "With a strong foundation in both backend and frontend development.",
       fullDescription: language === 'fr'
-        ? "Développeur Full Stack polyvalent maîtrisant l'ensemble de la stack technique moderne. Côté backend : Java Spring Boot, bases de données relationnelles et NoSQL, microservices. Côté frontend : React, Angular, interfaces responsives et PWA. J'utilise des méthodologies Agile et des outils DevOps pour assurer la qualité et la livraison continue."
-        : "Versatile Full Stack developer mastering the entire modern technical stack. Backend: Java Spring Boot, relational and NoSQL databases, microservices. Frontend: React, Angular, responsive interfaces and PWA. I use Agile methodologies and DevOps tools to ensure quality and continuous delivery.",
+        ? "Développeur Full Stack polyvalent maîtrisant l'ensemble de la stack technique moderne. Côté backend : Csharp, bases de données relationnelles et NoSQL, microservices. Côté frontend : React, Angular, interfaces responsives et PWA. J'utilise des méthodologies Agile et des outils DevOps pour assurer la qualité et la livraison continue."
+        : "Versatile Full Stack developer mastering the entire modern technical stack. Backend: Csharp, relational and NoSQL databases, microservices. Frontend: React, Angular, responsive interfaces and PWA. I use Agile methodologies and DevOps tools to ensure quality and continuous delivery.",
       color: "#45b7d1",
       technologies: language === 'fr'
-        ? ["Spring Boot", "React", "Angular", "MySQL", "DevOps"]
-        : ["Spring Boot", "React", "Angular", "MySQL", "DevOps"]
+        ? ["Spring Boot", "React", "Vue ", "MySQL", "DevOps"]
+        : ["Spring Boot", "React", "Vue", "MySQL", "DevOps"]
     },
     {
       icon: <Globe size={40} />,
@@ -59,12 +59,12 @@ const Services = () => {
         ? "Création de sites web modernes et responsifs avec les dernières technologies."
         : "Creating modern and responsive websites with the latest technologies.",
       fullDescription: language === 'fr'
-        ? "Spécialiste du développement web moderne avec expertise en React, Angular et technologies frontend avancées. Je crée des interfaces utilisateur intuitives, des applications web progressives (PWA) et des sites e-commerce performants. Mon approche inclut l'optimisation SEO, l'accessibilité et la performance pour offrir une expérience utilisateur exceptionnelle."
+        ? "Spécialiste du développement web moderne avec expertise en React, Vue et technologies frontend avancées. Je crée des interfaces utilisateur intuitives, des applications web progressives (PWA) et des sites e-commerce performants. Mon approche inclut l'optimisation SEO, l'accessibilité et la performance pour offrir une expérience utilisateur exceptionnelle."
         : "Modern web development specialist with expertise in React, Angular and advanced frontend technologies. I create intuitive user interfaces, progressive web applications (PWA) and high-performance e-commerce sites. My approach includes SEO optimization, accessibility and performance to deliver an exceptional user experience.",
       color: "#f39c12",
       technologies: language === 'fr'
-        ? ["React", "Angular", "HTML5", "CSS3", "JavaScript"]
-        : ["React", "Angular", "HTML5", "CSS3", "JavaScript"]
+        ? ["React", "Vue", "HTML5", "CSS3", "JavaScript"]
+        : ["React", "Vue", "HTML5", "CSS3", "JavaScript"]
     },
     {
       icon: <Shield size={40} />,
@@ -77,8 +77,8 @@ const Services = () => {
         : "Cybersecurity and DevOps expert with a proactive approach to data protection. I implement robust CI/CD pipelines with GitLab and Jenkins, automated security testing, and secure deployment strategies. My expertise includes secret management, data encryption and compliance with security standards.",
       color: "#e74c3c",
       technologies: language === 'fr'
-        ? ["GitLab", "Jenkins", "Docker", "Sécurité", "CI/CD"]
-        : ["GitLab", "Jenkins", "Docker", "Security", "CI/CD"]
+        ? ["Github, azur",  "Docker", "Sécurité", "CI/CD"]
+        : ["Github, azur",  "Docker", "Security", "CI/CD"]
     },
     {
       icon: <Zap size={40} />,

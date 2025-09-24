@@ -76,7 +76,7 @@ const Home = () => {
         </motion.h3>
         
         <motion.h1 variants={itemVariants}>
-          Jason Kamsu
+          Nthiekam William
         </motion.h1>
         
         <motion.h3 variants={itemVariants}>
@@ -91,19 +91,19 @@ const Home = () => {
         </motion.p>
 
         <motion.div className="social-media" variants={itemVariants}>
-          <a href="https://www.linkedin.com/in/jason-kamsu" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/william-nthiekam-05b3b3280/" target="_blank" rel="noopener noreferrer">
             <Linkedin size={24} />
           </a>
-          <a href="https://github.com/Jasonksj" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Nthiekamw" target="_blank" rel="noopener noreferrer">
             <Github size={24} />
           </a>
-          <a href="https://gitlab.com/JasonKamsu" target="_blank" rel="noopener noreferrer">
+          <a href="https://gitlab.com/NthiekamWilliam" target="_blank" rel="noopener noreferrer">
             <Gitlab size={24} />
           </a>
         </motion.div>
 
         <motion.div className="home-buttons" variants={itemVariants}>
-          <a href="/assets/CV_Jason_Kamsu.pdf" className="btn primary" download>
+          <a href="/assets/CV.pdf" className="btn primary" download>
             <Download size={20} />
             <span>{t('downloadCV')}</span>
           </a>
@@ -121,7 +121,7 @@ const Home = () => {
         transition={{ duration: 0.8, delay: 0.3 }}
       >
         <div className="profile-container">
-          <img src="/assets/Photo_VISA.png" alt="Jason Kamsu" />
+          <img src="/assets/Profil.jpg" alt="Nthiekam William" />
           <div className="profile-glow"></div>
         </div>
         
@@ -150,4 +150,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home; // Nthiekam William

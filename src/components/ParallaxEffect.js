@@ -24,7 +24,6 @@ const ParallaxEffect = ({ children, speed = 0.5, className = '' }) => {
       }
     };
 
-    // Utiliser requestAnimationFrame pour des performances optimales
     let ticking = false;
     const requestTick = () => {
       if (!ticking) {
@@ -37,7 +36,7 @@ const ParallaxEffect = ({ children, speed = 0.5, className = '' }) => {
     };
 
     window.addEventListener('scroll', requestTick, { passive: true });
-    handleScroll(); // Appel initial
+    handleScroll();
 
     return () => {
       window.removeEventListener('scroll', requestTick);
@@ -65,12 +64,11 @@ export const useParallax = (speed = 0.5) => {
       const elementTop = rect.top + scrolled;
       const windowHeight = window.innerHeight;
 
-      // Effet de parallax avec rotation et scale
       if (elementTop < scrolled + windowHeight && elementTop + rect.height > scrolled) {
         const progress = (scrolled - elementTop + windowHeight) / (windowHeight + rect.height);
         const yPos = -(scrolled - elementTop) * speed;
-        const rotation = progress * 10 - 5; // Rotation de -5° à 5°
-        const scale = 1 + progress * 0.1; // Scale de 1 à 1.1
+        const rotation = progress * 10 - 5;
+        const scale = 1 + progress * 0.1;
 
         element.style.transform = `translate3d(0, ${yPos}px, 0) rotate(${rotation}deg) scale(${scale})`;
       }
@@ -131,4 +129,4 @@ export const FloatingElement = ({ children, intensity = 1, duration = 3 }) => {
   );
 };
 
-export default ParallaxEffect;
+export default ParallaxEffect; // N W - William Nthiekam

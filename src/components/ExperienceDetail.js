@@ -13,39 +13,39 @@ const ExperienceDetail = () => {
 
   const experiences = [
     {
-      id: "junapay",
-      title: "JunaPay - Plateforme de Paiement Mobile Sécurisée",
+      id: "trip-application",
+      title: "Trip - Application de Paiement Mobile",
       period: "Depuis juin 2025",
       location: "Douala, Cameroun",
-      description: "Solution de paiement mobile haute sécurité pour l'Afrique francophone",
-      technologies: ["Java Spring Boot", "Flutter", "React", "Angular", "MySQL"],
+      description: "Solution de paiement mobile sécurisée avec Flutter, Node.js et Firebase",
+      technologies: ["Node.js", "Flutter", "Firebase", "React", "MySQL"],
       achievements: [
-        "Backend API REST avec Java Spring Boot",
+        "Backend API REST avec Node.js et Express",
         "Application mobile Flutter cross-platform (iOS/Android)",
-        "Site vitrine React pour utilisateurs finaux",
-        "Dashboard d'administration Angular avec monitoring temps réel",
-        "Authentification multi-facteurs avec JWT et refresh tokens",
-        "Chiffrement AES-256 pour transactions financières",
-        "Système de détection de fraude avec alertes automatiques",
-        "Pipeline CI/CD GitLab avec déploiement automatisé via Jenkins",
-        "Surveillance 24/7 avec alertes",
-        "Tests de sécurité automatisés (penetration testing)"
+        "Authentification sécurisée avec Firebase Auth",
+        "Gestion des transactions via Firebase Firestore",
+        "Dashboard React pour suivi des paiements",
+        "Notifications push pour les transactions",
+        "Sécurité renforcée avec cryptage AES-256",
+        "Pipeline CI/CD GitLab avec déploiement automatisé",
+        "Surveillance et logs temps réel",
+        "Tests unitaires et e2e automatisés"
       ],
       challenges: language === 'fr' 
-        ? "Gestion de la sécurité financière, conformité réglementaire, scalabilité pour des millions d'utilisateurs"
-        : "Financial security management, regulatory compliance, scalability for millions of users",
+        ? "Sécurité des transactions, scalabilité pour plusieurs milliers d'utilisateurs"
+        : "Transaction security, scalability for thousands of users",
       impact: language === 'fr'
-        ? "Réduction de 60% des fraudes, augmentation de 200% du volume de transactions"
-        : "60% reduction in fraud, 200% increase in transaction volume",
+        ? "Réduction de 50% des erreurs de transaction, augmentation de 150% des paiements mobiles"
+        : "50% reduction in transaction errors, 150% increase in mobile payments",
       screenshots: [
-        "/assets/API.png",
-        "/assets/API 2.png",
-        "/assets/Desktop.png"
+        "/assets/Trip1.png",
+        "/assets/Trip2.png",
+        "/assets/Trip3.png"
       ],
-      gitlabUrl: "https://gitlab.com/juna-pay",
+      gitlabUrl: "https://gitlab.com/william-nw/trip-app",
       hasDemo: true,
-      demoUrl: "https://www.juna-pay.fr",
-      client: "JunaPay Technologies"
+      demoUrl: "https://www.trip-app.com",
+      client: "Trip Technologies"
     },
     {
       id: "estlc-inscription",
@@ -54,7 +54,7 @@ const ExperienceDetail = () => {
       location: "ESTLC Ecole Supérieure de Transport, Logistique et Commerce",
       client: "ESTLC Ecole Supérieure de Transport, Logistique et Commerce (Cameroun)",
       description: "Digitalisation du processus d'inscription pour 5000+ candidats annuels",
-      technologies: ["Spring Boot", "MySQL", "JavaMail API", "JWT"],
+      technologies: ["Node.js", "MySQL", "JavaMail API", "JWT"],
       achievements: [
         "Architecture microservices réduisant le temps de traitement de 70%",
         "15+ endpoints REST API sécurisés avec authentification JWT",
@@ -70,28 +70,28 @@ const ExperienceDetail = () => {
         ? "Amélioration de 70% de l'efficacité du processus d'inscription"
         : "70% improvement in enrollment process efficiency",
       screenshots: [
-        "/assets/Web 1.png",
-        "/assets/Web 2.png",
-        "/assets/Web 3.png"
+        "/assets/Web1.png",
+        "/assets/Web2.png",
+        "/assets/Web3.png"
       ],
-      gitlabUrl: "https://github.com/Jasonksj/estlc-inscription",
+      gitlabUrl: "https://gitlab.com/william-nw/estlc-inscription",
       hasDemo: false,
       demoUrl: null
     },
     {
-      id: "genyshop",
-      title: "GenyShop - Application Mobile de Vente en Ligne",
+      id: "thegift",
+      title: "TheGift - Application Mobile de Cadeaux",
       period: "Mars 2023 - Août 2023",
       location: "Douala, Cameroun",
       client: "ChickDev Douala",
-      description: "Application e-commerce complète avec analyse fonctionnelle et technique",
-      technologies: ["Spring Boot", "Angular 15", "Flutter", "MySQL", "Docker"],
+      description: "Application e-commerce pour cadeaux avec gestion mobile et web",
+      technologies: ["Node.js", "Angular", "Flutter", "MySQL", "Docker"],
       achievements: [
-        "Analyse fonctionnelle et technique avec diagrammes UML via Visual Paradigm",
+        "Analyse fonctionnelle et technique avec diagrammes UML",
         "Base de données SQL optimisée avec 15+ tables relationnelles",
-        "Backend microservices avec Spring Boot",
+        "Backend microservices avec Node.js",
         "APIs RESTful documentées avec Swagger",
-        "Interface mobile responsive en Dart (92% de satisfaction utilisateur)",
+        "Interface mobile Flutter responsive (92% de satisfaction utilisateur)",
         "Version web Angular avec gestion d'état Redux",
         "Système de versioning GitLab avec revues de code et intégration continue"
       ],
@@ -102,9 +102,9 @@ const ExperienceDetail = () => {
         ? "92% de satisfaction utilisateur, réduction de 40% du temps de chargement"
         : "92% user satisfaction, 40% reduction in loading time",
       screenshots: [
-        "/assets/Desktop 2.png",
-        "/assets/Desktop 3.png",
-        "/assets/Desktop 4.png"
+        "/assets/TheGift1.png",
+        "/assets/TheGift2.png",
+        "/assets/TheGift3.png"
       ],
       gitlabUrl: null,
       hasDemo: false,

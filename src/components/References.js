@@ -12,9 +12,9 @@ const References = () => {
 
   const references = [
     {
-      name: "Junior Essono Ella Steve",
-      title: "Directeur Général, ChickDev",
-      email: "junioressono@gmail.com"
+      name: "Erwan NAM HEEJ",
+      title: "Responsable pole developpement  , Akto Paris 19 eme ",
+      email: "erwan.nam-hee@akto.fr"
     }
   ];
 

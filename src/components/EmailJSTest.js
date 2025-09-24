@@ -17,7 +17,7 @@ const EmailJSTest = () => {
          'service_av4lx2i',
          'template_z3ca2dx',
          {
-           to_email: 'jasonkamsu@gmail.com',
+           to_email: 'williamnthiekam392@gmail.com',
            from_name: 'Test Portfolio',
            from_email: 'test@portfolio.com',
            from_phone: 'Test',

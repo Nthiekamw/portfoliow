@@ -113,15 +113,15 @@ const Skills = () => {
 
   const education = [
     {
-      degree: "Manager de Solutions Digitales et Data",
-      school: "3iL Ingénieurs Limoges",
-      period: "Depuis septembre 2024",
-      description: "Spécialisation : Architecture logicielle, Big Data, Intelligence Artificielle"
+      degree: "Chef de projet developpeur digitale  M1",
+      school: "F2I Paris  ",
+      period: "Depuis septembre Mars 2024 à Septembre 2025 ",
+      description: "Spécialisation : Architecture logicielle, Big Data, Intelligence Artificielle, gestion de projet "
     },
     {
-      degree: "Conception de Système d'Information Informatisé",
-      school: "Institut Universitaire de la Cote Douala",
-      period: "Octobre 2023 - Mai 2024",
+      degree: "Consultant web et mobile Bac +3",
+      school: "F2I Paris ",
+      period: " Septembre 2023 à Septembre 2024 ",
       description: "Développement Logiciel et Web"
     },
     {

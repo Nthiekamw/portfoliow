@@ -275,7 +275,7 @@ const SplashScreen = ({ onComplete }) => {
             whileHover="pulse"
           >
             <div className="logo">
-              <span className="logo-text">JK</span>
+              <span className="logo-text">WN</span>
               <div className="logo-glow"></div>
             </div>
           </motion.div>
@@ -287,7 +287,7 @@ const SplashScreen = ({ onComplete }) => {
             initial="hidden"
             animate="visible"
           >
-            {language === 'fr' ? 'Jason Kamsu' : 'Jason Kamsu'}
+            {language === 'fr' ? 'William Nthiekam' : 'William Nthiekam'}
           </motion.h1>
 
           {/* Sous-titre */}

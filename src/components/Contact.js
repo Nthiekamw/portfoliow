@@ -29,7 +29,7 @@ const Contact = () => {
   const emailSuggestions = [
     {
       subject: 'Recherche de stage en développement web',
-      message: `Bonjour Jason,
+      message: `Bonjour William Nthiekam,
 
 Je suis actuellement en formation en développement web et je recherche activement un stage pour mettre en pratique mes compétences. J'ai développé un portfolio qui présente mes projets et mes compétences techniques.
 
@@ -48,7 +48,7 @@ Cordialement,
     },
     {
       subject: 'Candidature pour un stage en développement',
-      message: `Bonjour Jason,
+      message: `Bonjour William Nthiekam,
 
 Je vous présente ma candidature pour un stage en développement web. Passionné par la programmation, j'ai créé plusieurs projets personnels et je souhaite maintenant acquérir une expérience professionnelle.
 
@@ -67,7 +67,7 @@ Cordialement,
     },
     {
       subject: 'Demande de stage - Portfolio développeur web',
-      message: `Bonjour Jason,
+      message: `Bonjour William Nthiekam,
 
 Je recherche un stage en développement web pour la période [précisez la période]. Mon portfolio présente mes projets et mes compétences techniques acquises en formation.
 
@@ -86,7 +86,7 @@ Cordialement,
     },
     {
       subject: 'Échange sur les opportunités de stage',
-      message: `Bonjour Jason,
+      message: `Bonjour William Nthiekam,
 
 Je suis en formation en développement web et je souhaite échanger avec vous sur les opportunités de stage dans votre entreprise. J'ai consulté vos projets et votre approche m'intéresse beaucoup.
 
@@ -105,7 +105,7 @@ Cordialement,
     },
     {
       subject: 'Demande de conseil pour ma recherche de stage',
-      message: `Bonjour Jason,
+      message: `Bonjour William Nthiekam,
 
 Je recherche actuellement un stage en développement web et j'aimerais avoir vos conseils sur ma démarche. Votre expérience dans le domaine m'intéresse beaucoup.
 
@@ -124,7 +124,7 @@ Cordialement,
     },
     {
       subject: 'Autre demande concernant un stage',
-      message: `Bonjour Jason,
+      message: `Bonjour William Nthiekam,
 
 Je vous contacte pour une demande spécifique concernant un stage en développement web :
 
@@ -140,7 +140,7 @@ Cordialement,
     },
     {
       subject: 'Autre',
-      message: `Bonjour Jason,
+      message: `Bonjour William Nthiekam,
 
 [Votre message personnalisé]
 
@@ -184,7 +184,7 @@ Cordialement,
     try {
       // Paramètres du template EmailJS
       const templateParams = {
-        to_email: 'jasonkamsu@gmail.com',
+        to_email: '	williamnthiekam392@gmail.com',
         from_name: formData.fullName,
         from_email: formData.email,
         from_phone: formData.phone,
@@ -266,7 +266,7 @@ Cordialement,
               <Mail size={24} />
               <div>
                 <h4>Email</h4>
-                <p>jasonkamsu@gmail.com</p>
+                <p>	williamnthiekam392@gmail.com</p>
               </div>
             </div>
             
@@ -274,7 +274,7 @@ Cordialement,
               <Phone size={24} />
               <div>
                 <h4>Téléphone</h4>
-                <p>07 62 85 53 88</p>
+                <p>06 15 01 36 94</p>
               </div>
             </div>
             
@@ -282,7 +282,7 @@ Cordialement,
               <MapPin size={24} />
               <div>
                 <h4>Localisation</h4>
-                <p>Limoges, France</p>
+                <p>Paris, France</p>
               </div>
             </div>
           </motion.div>
@@ -319,20 +319,20 @@ Cordialement,
                 value={formData.phone}
                 onChange={handleInputChange}
               />
-                             <select
-                 name="subject"
-                 value={formData.subject}
-                 onChange={handleSubjectChange}
-                 required
-                 className="subject-select"
-               >
-                 <option value="">{t('isFrench') ? 'Choisir un sujet' : 'Choose a subject'}</option>
-                 {emailSuggestions.map((suggestion, index) => (
-                   <option key={index} value={suggestion.subject}>
-                     {suggestion.subject}
-                   </option>
-                 ))}
-               </select>
+              <select
+                name="subject"
+                value={formData.subject}
+                onChange={handleSubjectChange}
+                required
+                className="subject-select"
+              >
+                <option value="">{t('isFrench') ? 'Choisir un sujet' : 'Choose a subject'}</option>
+                {emailSuggestions.map((suggestion, index) => (
+                  <option key={index} value={suggestion.subject}>
+                    {suggestion.subject}
+                  </option>
+                ))}
+              </select>
             </div>
             
             <textarea
@@ -388,4 +388,4 @@ Cordialement,
   );
 };
 
-export default Contact;
+export default Contact; // N W - Nthiekam William

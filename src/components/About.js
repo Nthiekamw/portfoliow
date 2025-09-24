@@ -81,8 +81,8 @@ const About = () => {
               <CheckCircle size={20} />
               <span>
                 {t('isFrench') ? 
-                  'Développement Full-Stack avec Java Spring Boot et React' :
-                  'Full-Stack development with Java Spring Boot and React'
+                  'Développement Full-Stack avec C# et React/vue js' :
+                  'Full-Stack development with  C# et React/vue js'
                 }
               </span>
             </div>

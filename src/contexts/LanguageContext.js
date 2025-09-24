@@ -46,7 +46,7 @@ export const LanguageProvider = ({ children }) => {
         // About Section
         aboutMe: 'À propos de Moi',
         passionateDeveloper: 'Développeur Full-Stack Passionné',
-        aboutDescription: 'Étudiant en Master Manager de Solutions Digitales et Data à 3iL Ingénieurs Limoges, je suis passionné par le développement logiciel et l\'innovation technologique.',
+        aboutDescription: 'Étudiant en Master 2 Expert en strategie et transformation digital & chef de projet developpeur   à F2I Paris France , je suis passionné par le développement logiciel et l\'innovation technologique.',
         yearsExperience: 'Années d\'expérience',
         projectsCompleted: 'Projets réalisés',
         technologiesMastered: 'Technologies maîtrisées',
