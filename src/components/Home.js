@@ -16,13 +16,13 @@ const Home = () => {
     'Développeur Full-Stack',
     'Architecte Logiciel',
     'Spécialiste C#',
-    'Expert React & Angular',
+    'Expert React & Vue',
     'Passionné d\'Innovation'
   ] : [
     'Full-Stack Developer',
     'Software Architect',
     'C# Specialist',
-    'React & Angular Expert',
+    'React & Vue Expert',
     'Innovation Enthusiast'
   ];
 
