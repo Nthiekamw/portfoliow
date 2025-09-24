@@ -15,7 +15,7 @@ const Home = () => {
   const texts = useLanguage().isFrench ? [
     'Développeur Full-Stack',
     'Architecte Logiciel',
-    'Spécialiste Java Spring',
+    'Spécialiste C#',
     'Expert React & Angular',
     'Passionné d\'Innovation'
   ] : [
