@@ -21,7 +21,7 @@ const Home = () => {
   ] : [
     'Full-Stack Developer',
     'Software Architect',
-    'Java Spring Specialist',
+    'C# Specialist',
     'React & Angular Expert',
     'Innovation Enthusiast'
   ];
